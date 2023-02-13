@@ -1,16 +1,43 @@
-<div class="card-group" >
-  <div *ngFor="let movie of targetMovies">
-          <div class="card border-dark text-white bg-dark mb-3" style="max-width: 18rem;  max-width: 14rem;">
-            <img class="card-img-top" src = {{movie.imagen}} alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">{{movie.calificacion}}</h5>
-              <h4 class="card-title">{{movie.nombre}}</h4>
-            </div>
-            <div class="card-footer">
-              <small class="btn">Trailer</small>
-            </div>
-          </div>
-          
+<div class="main-container">
+  <div class="container-favorites">
+    <div class="title-container">
+      <h3 class="title">Fan favorites</h3>
+     <fa-icon class="me-2 me-de" [icon]="faChevronRight"></fa-icon>
+    </div>
+    <p>This week's top TV and movies</p>
   </div>
-</div>
-  
+
+<swiper
+    [slidesPerView]="6"
+    [slidesPerGroup]="6"
+    [spaceBetween]="10"
+    #newSwiper
+>
+<ng-template swiperSlide *ngFor="let movie of targetMovies">
+  <div class="img-plus">
+    <img src={{movie.imagen}} style="height: 300px; width: 180px;">
+  <div class="plus-container">
+    <fa-icon [icon]="faPlus" class="faplus"></fa-icon>
+  </div>
+  </div>
+  <div class="card-main">
+    <div class="card-body">
+      <div class="calificacion-container">
+        <fa-icon [icon]="faStar"></fa-icon><p class="card-title-calification">{{movie.calificacion}}</p>
+        <button class="btn btn-dark fast"><mat-icon class="fastarborder">star_border</mat-icon></button>
+      </div>
+      <div class="card-title--container">
+        <h4 class="card-title ">{{movie.nombre}}</h4>
+      </div>
+      <div class="card-footer">
+        <button class="watch btn btn-dark"><fa-icon [icon]="faPlus" class="fapluss"></fa-icon>Watch now</button>
+        <small class="btn btn-dark"><fa-icon [icon]="faPlay" class="faplay"></fa-icon>Trailer</small>
+      </div>
+    </div>
+  </div>
+</ng-template>
+</swiper>
+  <div (click)="slidePrev()" class="swiper-button-prev .swiper-button-disabled"></div>
+  <div (click)="slideNext()" class="swiper-button-next .swiper-button-disabled"></div>
+
+ <div class="scroll" style="height:200px"></div>

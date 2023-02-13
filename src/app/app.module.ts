@@ -13,6 +13,7 @@ import { AccordionMenuComponent } from './header/menu-sidebar/accordion-menu/acc
 import { MoviesComponent } from './movies/movies.component';
 import { MovieSectionComponent } from './movie-section/movie-section.component';
 import { SwiperModule } from 'swiper/angular';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,9 @@ import { SwiperModule } from 'swiper/angular';
     AccordionMenuComponent,
     MoviesComponent,
     MovieSectionComponent,
-    
+
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, SwiperModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, SwiperModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })
