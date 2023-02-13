@@ -1,6 +1,11 @@
 # MyImdb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+Este proyecto pertenece al grupo 2 de Nodo 
+Holger Duvan Esparza Gomez 
+Santiago Perez Cifuentes 
+Samuel Munera Echeverri 
+Daniela Borja Garces 
+Juan Estevan Rojas Carvajal
 
 ## Development server
 
